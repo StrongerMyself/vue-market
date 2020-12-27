@@ -1,0 +1,110 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Мужское",
+      "decription": "decription"
+    },
+    {
+      "id": 2,
+      "title": "Женское",
+      "decription": "decription"
+    },
+    {
+      "id": 3,
+      "title": "Детское",
+      "decription": "decription"
+    },
+    {
+      "id": 4,
+      "title": "Аксесуары",
+      "decription": "decription"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Куртка Мужская",
+      "price": 1000,
+      "categoryId": 1,
+      "decription": "decription"
+    },
+    {
+      "id": 2,
+      "title": "Куртка Женская",
+      "price": 1000,
+      "categoryId": 2,
+      "decription": "decription"
+    },
+    {
+      "id": 3,
+      "title": "Куртка Детская",
+      "price": 1000,
+      "categoryId": 3,
+      "decription": "decription"
+    },
+    {
+      "id": 4,
+      "title": "Шапка Мужская",
+      "price": 1000,
+      "categoryId": 1,
+      "decription": "decription"
+    },
+    {
+      "id": 5,
+      "title": "Шапка Женская",
+      "price": 1000,
+      "categoryId": 2,
+      "decription": "decription"
+    },
+    {
+      "id": 6,
+      "title": "Шапка Детская",
+      "price": 1000,
+      "categoryId": 3,
+      "decription": "decription"
+    },
+    {
+      "id": 7,
+      "title": "Футболка Мужская",
+      "price": 1000,
+      "categoryId": 1,
+      "decription": "decription"
+    },
+    {
+      "id": 8,
+      "title": "Футболка Женская",
+      "price": 1000,
+      "categoryId": 2,
+      "decription": "decription"
+    },
+    {
+      "id": 9,
+      "title": "Футболка Детская",
+      "price": 1000,
+      "categoryId": 3,
+      "decription": "decription"
+    },
+    {
+      "id": 10,
+      "title": "Брюки Мужская",
+      "price": 1000,
+      "categoryId": 1,
+      "decription": "decription"
+    },
+    {
+      "id": 11,
+      "title": "Брюки Женская",
+      "price": 1000,
+      "categoryId": 2,
+      "decription": "decription"
+    },
+    {
+      "id": 12,
+      "title": "Брюки Детская",
+      "price": 1000,
+      "categoryId": 3,
+      "decription": "decription"
+    }
+  ]
+}
