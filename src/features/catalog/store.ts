@@ -1,13 +1,15 @@
-import { ActionTree, GetterTree, MutationTree } from 'vuex'
+import { ActionContext } from 'vuex-types'
 import { Product } from 'entity-types'
 import { fetchList } from '@/services/products'
 import { FETCH_STATUS } from '@/constants/fetch-status'
 
-export type State = {
+type State = {
   list: Product[]
   errorText: string
   fetchStatus: keyof typeof FETCH_STATUS
 }
+
+type Context = ActionContext<'catalog'>
 
 const state = (): State => ({ 
   list: [],
@@ -15,22 +17,23 @@ const state = (): State => ({
   fetchStatus: FETCH_STATUS.NOT_ASKED,
 })
 
-const mutations: MutationTree<State> = {
-  loading(state) {
+const mutations = {
+  loading(state: State) {
     state.fetchStatus = FETCH_STATUS.LOADING
   },
-  loaded(state, payload: Product[]) {
+  loaded(state: State, payload: Product[]) {
     state.list = payload
     state.fetchStatus = FETCH_STATUS.LOADED
   },
-  failed(state, payload: string){
+  failed(state: State, payload: string) {
     state.errorText = payload
     state.fetchStatus = FETCH_STATUS.FAILED
   }
 }
 
-const actions: ActionTree<State, {}> = {
-  async fetchList({ commit }) {
+const actions = {
+  async fetchList(context: Context) {
+    const { commit } = context
     commit('loading')
     fetchList()
       .then(list => {
@@ -42,14 +45,14 @@ const actions: ActionTree<State, {}> = {
   }
 }
 
-const getters: GetterTree<State, {}> = {
-  isLoading(state) {
+const getters = {
+  isLoading(state: State) {
     return state.fetchStatus === FETCH_STATUS.LOADING
   },
-  isLoaded(state) {
+  isLoaded(state: State) {
     return state.fetchStatus === FETCH_STATUS.LOADED
   },
-  isError(state) {
+  isError(state: State) {
     return state.fetchStatus === FETCH_STATUS.FAILED
   },
 }
